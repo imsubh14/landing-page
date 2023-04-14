@@ -1,0 +1,219 @@
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    font-family:gilroy;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+.btn{
+    font-size:medium;
+    font-weight: 550;
+    padding:.7rem 3.5rem;
+    border-radius: 5rem;
+    color:#000000;
+    background-color: #09ceff;
+    margin-top: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:none;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; 
+    right: 0;
+    height:100%;
+    width:0%;
+    background:#b25314;
+    z-index: -1;
+    transition: .4s ease-out ;
+}
+
+.btn:hover::before{
+    left: 0;
+    width:100%;
+}
+
+.heading{
+    padding:.5rem 2rem;
+    font-size: 2rem;
+    background:rgba(0,0,0,.1);
+    display: inline-block;
+    margin:1rem 0;
+}
+
+.title{
+    font-size: 4rem;
+    color:#333;
+    padding:0 1rem;
+    text-align: center;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:2rem 7%;
+    background-color: #0f0f0f;
+}
+
+header .logo i{
+    padding:10px;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li a{
+    font-size: larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 550;
+    margin-left: 60px;
+    color:#ffffff;
+    position: relative;
+}
+
+header .navbar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom:-.5rem; right:0;
+    width:0%;
+    height:.2rem;
+    background:#000000;
+    transition: .2s linear;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-image: url(abcd.png); 
+    animation-name: thor; 
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+@keyframes thor{
+    0%{background-image: url(abcd.png);}
+    50%{background-image: url(a12.png);}
+}
+.product{
+    min-height: 100vh;
+    text-align: center;
+    background:#eee;
+    padding:5rem;
+    padding-top: 1rem;
+    background: linear-gradient(rgb(0, 204, 255) , rgb(13, 110, 220) , rgb(3, 205, 236));
+}
+
+.product .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.product .box-container .box{
+    margin:1rem;
+    background:#ffffff;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+    padding:2rem 4rem;
+}
+
+.product .box-container .box h3{
+    padding:1rem 0;
+    font-size:20px;
+    color:#444;
+}
+
+.product .box-container .box .price{
+    padding:1rem 0;
+    font-size: 15px;
+    font-weight: 600;
+    color:#333;
+    display: block;
+}
+
+.product .box-container .box img{
+    height:20rem;
+    width:30rem;
+    margin:1rem 0;
+}
+.footer{
+    background:#eee;
+    cursor: pointer;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 ;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+.footer .box-container .box p{
+    font-size: 20px;
+    font-weight: 300;
+    color:#000000;
+    padding:1rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer .box-container .box p i{
+    padding:0 .5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+.footer p:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    padding:1.8rem 36rem;
+    text-align: center;
+    background:#000000;
+    color:#ffffff;
+    font-size:100;
+}
+
+
